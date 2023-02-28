@@ -34,7 +34,13 @@ body *{
 }
 
 
-h1, h2, h3, h4, h5, h6, strong{
+h1, h2, h3, h4, h5, h6, span, strong{
+	color: var(--mainText);
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
+}
+
+.name{
 	color: var(--mainText);
 	font-family: 'Russo One', sans-serif;
 	font-weight: 500;
@@ -122,6 +128,7 @@ h6 { font-size: 16px;}
 .nav-wrapper{
 	border-radius:5px 5px 0 0;
 	grid-area:nav-wrapper;
+	height: 55px;
 	border-bottom: 1px solid var(--borderColor);
 	display: flex;
 	justify-content: space-between;
@@ -131,6 +138,7 @@ h6 { font-size: 16px;}
 
 #navigation a{
 	color:#f1554c;
+	font-size: 18px;
 }
 
 
@@ -148,6 +156,10 @@ h6 { font-size: 16px;}
 .dots-wrapper{
 	display: flex;
 	padding: 10px;
+}
+
+.skill-img{
+	width: 100%;
 }
 
 
@@ -174,9 +186,9 @@ h6 { font-size: 16px;}
 #profile_pic{
 	display: block;
 	margin:0 auto;
-	border-radius: 50px;
-	height: 100px;
-	width: 100px;
+	border-radius: 50%;
+	height: 130px;
+	width: 130px;
 	object-fit: cover;
 	border:2px solid var(--borderColor);
 }
@@ -240,6 +252,31 @@ h6 { font-size: 16px;}
 	padding-bottom: 50px;
 }
 
+.menu-tabs{
+	width: 70%;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+}
+
+.menu-tabs h4{
+cursor: pointer;
+line-height: 35px;
+
+/* border-bottom: 3px solid #f1554c; */
+}
+
+
+
+.active{
+border-bottom: 3px solid #f1554c;
+
+}
+
+.verticalLine {
+	border-left: thick solid #ff0000;
+  }
+
 
 #preview-shadow{
 	background-color: var(--mainColor);
@@ -254,6 +291,7 @@ h6 { font-size: 16px;}
 	width: 300px;
 	border:1.5px solid #17a2b8;
 	background-color: var(--previewBg);
+	box-shadow: 14px 7px 20px 0px #a7c3ff69;
 	padding:15px;
 	position: relative;
 }
@@ -298,12 +336,19 @@ h6 { font-size: 16px;}
 }
 
 
-#skills{
+.tab-content {
+	display: none;
+	/* padding: 10px; */
+  }
+  
+  .show-content {
+	display: block;
 	display: flex;
 	justify-content: space-evenly;
 	background-color: var(--secondaryColor);
 	border-radius: 7px;
-}
+	/* background: lightgray; */
+  }
 
 .social-links{
 	display: grid;
@@ -312,11 +357,11 @@ h6 { font-size: 16px;}
 }
 
 #social_img{
-	width: 80%;
+	width: 90%;
 	display: block;
 	height: auto;
 	margin: 0 auto;
-	background-color: var(--secondaryColor);
+	/* background-color: var(--secondaryColor); */
 	border-radius: 7px;
 	
 }
@@ -570,6 +615,11 @@ ul.social-set {
 		padding-top: 0;
 	}
 
+	.about-wrapper {
+	
+		gap: 50px;
+	}
+
 	.up {
         right: 2rem;
     }
@@ -577,7 +627,17 @@ ul.social-set {
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
+
+	.menu-tabs{
+		width: 100%;
+	
+	}
+
+	.about-wrapper {
+	
+		gap: 50px;
+	}
 	#preview-shadow{
 		max-width: 280px;
 		height: 180px;

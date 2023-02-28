@@ -1,0 +1,105 @@
+
+:root{
+	--mainColor:#ffffff;
+	--secondaryColor:#e9ecf5;
+
+	--borderColor:#ffffff;
+
+	--border:#c2cada;
+
+	--mainText:#0d276b;
+	--secondaryText:#3d73dd;
+
+	--themeDotBorder:#24292e;
+
+	--previewBg:rgb(251, 249, 243, 0.8);
+	--previewShadow:#ffd4d4;
+
+
+	--buttonColor:#0d276b;
+
+
+}
+
+#education{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--secondaryColor);
+	border-radius: 7px;
+}
+
+#experience{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--secondaryColor);
+	border-radius: 7px;
+}
+
+
+.sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+.lists {
+    padding-bottom: 1.5rem;
+    border-left: 1px solid #abaaed;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.lists:last-child {
+    border: 0px;
+    padding-bottom: 0;
+}
+.lists:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid #4e5ed3;
+    box-shadow: 3px 3px 0px #bab5f8;
+    box-shadow: 3px 3px 0px #bab5f8;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+.time {
+    	color: var(--secondaryText);
+	font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+}
+@media screen and (min-width: 601px) {
+    .time {
+        font-size: 0.9rem;
+   }
+}
+@media screen and (max-width: 600px) {
+    .time {
+        margin-bottom: 0.3rem;
+        font-size: 0.95rem;
+   }
+}
+
+.para {
+    color: var(--mainText);
+	font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 0.1rem;
+    margin-bottom: 5px;
+}
+
+
+.due {
+    color: var(--mainText);
+	font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    margin-top: 5px;
+}
+@media screen and (max-width: 600px) {
+    .para {
+        font-size: 0.9rem;
+   }
+}
